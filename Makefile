@@ -6,7 +6,7 @@
 #    By: fhuang <fhuang@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/17 10:16:48 by fhuang            #+#    #+#              #
-#    Updated: 2017/08/17 17:20:05 by fhuang           ###   ########.fr        #
+#    Updated: 2017/09/14 11:04:02 by fhuang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,9 @@ CC		:=	clang -pipe
 CFLAGS	:=	-Wall -Wextra -Werror -g3
 SRCDIR	:=	src/
 OBJDIR	:=	obj/
-SRC1		:=	$(SRCDIR)colleen.c
-SRC2		:=	$(SRCDIR)grace.c
-SRC3		:=	$(SRCDIR)sully.c
+SRC1		:=	$(SRCDIR)Colleen.c
+SRC2		:=	$(SRCDIR)Grace.c
+SRC3		:=	$(SRCDIR)Sully.c
 
 OBJ1		:=	$(SRC1:$(SRCDIR)%.c=$(OBJDIR)%.o)
 OBJ2		:=	$(SRC2:$(SRCDIR)%.c=$(OBJDIR)%.o)
