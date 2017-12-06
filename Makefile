@@ -6,7 +6,7 @@
 #    By: fhuang <fhuang@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/17 10:16:48 by fhuang            #+#    #+#              #
-#    Updated: 2017/11/11 15:47:16 by fhuang           ###   ########.fr        #
+#    Updated: 2017/12/06 11:33:31 by fhuang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,13 +22,13 @@ CC		:=	clang -pipe
 CFLAGS	:=	-Wall -Wextra -Werror -g3
 SRCDIR	:=	src/
 OBJDIR	:=	obj/
-SRC1		:=	$(SRCDIR)Colleen.c
-SRC2		:=	$(SRCDIR)Grace.c
-SRC3		:=	$(SRCDIR)Sully.c
+SRC1		:=	colleen.c
+SRC2		:=	grace.c
+SRC3		:=	sully.c
 
-OBJ1		:=	$(SRC1:$(SRCDIR)%.c=$(OBJDIR)%.o)
-OBJ2		:=	$(SRC2:$(SRCDIR)%.c=$(OBJDIR)%.o)
-OBJ3		:=	$(SRC3:$(SRCDIR)%.c=$(OBJDIR)%.o)
+OBJ1		:=	$(SRC1:%.c=$(OBJDIR)%.o)
+OBJ2		:=	$(SRC2:%.c=$(OBJDIR)%.o)
+OBJ3		:=	$(SRC3:%.c=$(OBJDIR)%.o)
 CACHEF	:=	.cache_exists
 # ====================
 
@@ -88,7 +88,7 @@ re: fclean all
 COLLEEN_OUTPUT	= "tmp_Colleen"
 GRACE_OUTPUT	= "Grace_kid.c"
 SULLY_OUTPUT	= Sully_0.c Sully_1.c Sully_2.c Sully_3.c Sully_4.c Sully_5.c
-SULLY_OBJ		= Sully_0.o Sully_1.o Sully_2.o Sully_3.o Sully_4.o Sully_5.o
+SULLY_OBJ		= Sully_0 Sully_1 Sully_2 Sully_3 Sully_4 Sully_5
 
 colleen: $(NAME1)
 grace: $(NAME2)
