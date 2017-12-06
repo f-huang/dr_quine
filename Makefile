@@ -6,7 +6,7 @@
 #    By: fhuang <fhuang@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/17 10:16:48 by fhuang            #+#    #+#              #
-#    Updated: 2017/12/06 11:33:31 by fhuang           ###   ########.fr        #
+#    Updated: 2017/12/06 12:17:44 by fhuang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ CYAN		= "\033[0;36m"
 WHITE		= "\033[0;37m"
 # ====================
 
-.PHONY: all libft norme clean fclean re check colleen grace sully clean_sully check_colleen check_grace check_sully
+.PHONY: all libft norme clean fclean re check colleen grace sully clean_sully
 
 .SILENT:
 
@@ -93,23 +93,6 @@ SULLY_OBJ		= Sully_0 Sully_1 Sully_2 Sully_3 Sully_4 Sully_5
 colleen: $(NAME1)
 grace: $(NAME2)
 sully: $(NAME3)
-
-check: check_colleen check_grace check_sully
-
-check_colleen:
-	echo $(PURPLE) $(NAME1) $(EOC)
-	./$(NAME1) > $(COLLEEN_OUTPUT) && diff $(SRC1) $(COLLEEN_OUTPUT) && rm -r $(COLLEEN_OUTPUT)
-
-check_grace:
-	echo $(PURPLE) $(NAME2) $(EOC)
-	./$(NAME2) && diff $(SRC2) $(GRACE_OUTPUT) && rm -r $(GRACE_OUTPUT)
-
-check_sully:
-	echo $(PURPLE) $(NAME3)  $(EOC)
-	./$(NAME3)
-	ls -al | grep "Sully" | wc -l
-	$(foreach var, $(SULLY_OUTPUT), echo $(YELLOW)- Diff $(SRC3) and $(var) $(EOC); diff $(SRC3) $(var);)
-	rm -rf $(SULLY_OUTPUT) $(SULLY_OBJ)
 
 clean_sully:
 	rm -rf $(SULLY_OUTPUT) $(SULLY_OBJ)
